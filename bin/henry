@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'bundler'
+Bundler.require
+
+$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
+
+require 'henry/app'
+Henry.run!
