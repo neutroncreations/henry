@@ -1,0 +1,44 @@
+/*
+  MDN-LIKE Theme - Mozilla
+  Ported to CodeMirror by Peter Kroon <plakroon@gmail.com>
+  Report bugs/issues here: https://github.com/marijnh/CodeMirror/issues
+  GitHub: @peterkroon
+
+  The mdn-like theme is inspired on the displayed code examples at: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+*/
+
+.cm-s-henry.CodeMirror { color: #555; background-color: inherit; height: auto;}
+.cm-s-henry .CodeMirror-selected { background: #cfc !important; }
+
+.cm-s-henry .CodeMirror-gutters { background: #f8f8f8; border-left: 6px solid rgba(0,83,159,0.65); color: #333; }
+.cm-s-henry .CodeMirror-linenumber { color: #aaa; margin-left: 3px; }
+div.cm-s-henry .CodeMirror-cursor { border-left: 2px solid #222; }
+
+.cm-s-henry .cm-keyword {  color: #6262FF; }
+.cm-s-henry .cm-atom { color: #D80; }
+.cm-s-henry .cm-number { color:  #ca7841; }
+.cm-s-henry .cm-def { color: #8DA6CE; }
+.cm-s-henry span.cm-tag { color: #690; }
+.cm-s-henry span.cm-def { color: #07a; }
+
+.cm-s-henry .cm-formatting-list { color: #aaa;}
+.cm-s-henry .cm-variable { color: #07a; }
+.cm-s-henry .cm-property { color: #905; }
+.cm-s-henry .cm-qualifier { color: #690; }
+
+.cm-s-henry .cm-operator { color: #cda869; }
+.cm-s-henry .cm-comment { color:#777; font-weight:normal; font-family: monospace; }
+.cm-s-henry .cm-string { color:#07a; }
+.cm-s-henry .cm-string-2 { color:#bd6b18; } /*?*/
+.cm-s-henry .cm-meta { color: #000; } /*?*/
+.cm-s-henry .cm-builtin { color: #9B7536; } /*?*/
+.cm-s-henry .cm-tag { color: #997643; }
+.cm-s-henry .cm-attribute { color: #d6bb6d; } /*?*/
+.cm-s-henry .cm-formatting-header { color: #aaa; }
+.cm-s-henry .cm-hr { color: #AEAEAE; }
+.cm-s-henry .cm-link {   text-decoration:none; }
+.cm-s-henry .cm-formatting-link { color: #aaa;}
+.cm-s-henry .cm-error { border-bottom: 1px solid red; }
+
+div.cm-s-henry span.CodeMirror-matchingbracket {outline:1px solid grey; color: inherit;}

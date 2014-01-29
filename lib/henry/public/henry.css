@@ -1,0 +1,20 @@
+h2 input {
+	width: 100%;
+	border: none;
+	padding: 4px;
+	background: transparent;
+}
+
+body {
+	margin-top: 50px;
+	font-size: 18px;
+}
+
+body.edit > .container {
+	background: #f7f7f7;
+	margin-bottom: 50px;
+}
+
+div.frontmatter {
+	margin: 1em 4em;
+}

@@ -3,17 +3,30 @@
 	%head
 		%meta{:charset => 'utf-8'}
 		%link{:href=>"//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css", :rel=>"stylesheet"}
-		%script{:src=>"//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"}
+		%link{:href=>"//netdna.bootstrapcdn.com/bootswatch/3.0.3/cosmo/bootstrap.min.css", :rel=>"stylesheet"}
+		%link{:href=>"//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", :rel=>"stylesheet"}
+		%link{:href=>"/henry.css", :rel=>"stylesheet"}
+
+		%script{:src=>"http://code.jquery.com/jquery-2.1.0.min.js"}
+		%script{:src=>"/henry.js"}
+		%script{:src=>"/codemirror.js"}
+		%script{:src=>"/codemirror.md.js"}
+		%script{:src=>"/codemirror.yaml.js"}
+		%link{:href=>"/codemirror.css", :rel=>"stylesheet"}
+		%link{:href=>"/theme.css", :rel=>"stylesheet"}
 		%title= "Henry #{' &middot; ' + @title if @title}"
-	%body{:style => "margin-bottom: 70px;"}
-		%nav.navbar.navbar-default.navbar-fixed-bottom.navbar-inverse
+	%body{:class => @body_class}
+		%nav.navbar.navbar-default.navbar-fixed-top
 			.container
 				%ul.nav.navbar-nav
 					%li
-						%a{:href => '#about'} All Posts
+						%a{:href => '/'} Admin
 
-				%ul.nav.navbar-nav.navbar-right
-					%li
-						%a{:href => '#save'} Save
+				- if @post
+					%ul.nav.navbar-nav.navbar-right
+						%li
+							%a{:href => '#save'}
+								%i.fa.fa-floppy-o
+								Save
 		.container
 			= yield

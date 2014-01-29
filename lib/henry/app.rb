@@ -1,9 +1,7 @@
 require 'sinatra'
-require 'haml' # if you use haml views
+require 'haml'
 
 require 'henry/site'
-
-$site = Site.new
 
 class Henry < Sinatra::Base
 
@@ -19,8 +17,22 @@ class Henry < Sinatra::Base
   #
   get '/' do
 
-    print $site.posts.inspect
+  	site = Site.new
+    @posts = site.posts
 
-    haml :'/index'
+    haml :index
   end
+
+  get '/edit/:published/*' do
+
+    @body_class = 'edit'
+
+  	published = params[:published] == 'posts'
+
+  	site = Site.new
+  	@post = site.post(published, params[:splat].first)
+
+  	haml :edit
+  end
+
 end

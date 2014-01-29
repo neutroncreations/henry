@@ -1,0 +1,14 @@
+
+%form{}
+
+	%h2
+		%input{name: 'title', value: @post.title}
+
+	.frontmatter
+		%textarea{id: 'frontmatter', name: 'frontmatter'}&= @post.data.to_yaml
+
+	%textarea{id: 'body', name: 'body'}&= @post.content
+
+
+%script
+	$(load_editors);
